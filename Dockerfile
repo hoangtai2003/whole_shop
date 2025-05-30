@@ -6,6 +6,6 @@ RUN mvn clean install -DskipTests
 
 # Package stage
 FROM eclipse-temurin:17-jdk
-COPY --from=build /app/target/shopping_cart-1.0-SNAPSHOT.jar demo.jar
+COPY --from=build /app/target/Shopping_Cart-0.0.1-SNAPSHOT.jar demo.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "demo.jar"]
